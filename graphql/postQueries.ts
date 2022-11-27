@@ -14,6 +14,10 @@ export const GET_POSTS = gql`
       slug
       tags
       updatedAt
+      image {
+        id
+        url
+      }
     }
   }
 `;
@@ -32,6 +36,10 @@ export const GET_POST = gql`
       slug
       tags
       updatedAt
+      image {
+        id
+        url
+      }
     }
   }
 `;
