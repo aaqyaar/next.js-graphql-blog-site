@@ -7,3 +7,12 @@
   scroll-behavior: smooth;
   font-family: Inter;
 }
+
+.limit-text {
+  --max-lines: 3;
+  --line-height: 1.5;
+
+  max-height: calc(var(--max-lines) * var(--line-height) * 1em);
+  line-height: calc(var(--line-height));
+  overflow: hidden;
+}
