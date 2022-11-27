@@ -13,5 +13,5 @@ export const getPost = async (slug: string) => {
     query: GET_POST,
     variables: { slug },
   });
-  return { data: data, loading, error };
+  return { data: data.posts, loading, error };
 };

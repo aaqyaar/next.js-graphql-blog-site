@@ -1,8 +1,11 @@
-"use client";
+import BlogPosts from "components/Blogs/BlogPosts";
+import { getPosts } from "services/api";
 
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-
-export default function BlogListsPage({ params }: any) {
-  //
+export default async function BlogListsPage() {
+  const { data } = await getPosts();
+  return (
+    <div className="container my-5">
+      <BlogPosts posts={data} />
+    </div>
+  );
 }

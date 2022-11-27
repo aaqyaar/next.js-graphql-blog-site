@@ -24,7 +24,7 @@ export const GET_POSTS = gql`
 
 export const GET_POST = gql`
   query getPost($slug: String!) {
-    post(slug: $slug) {
+    posts(where: { slug: $slug }) {
       id
       title
       author
